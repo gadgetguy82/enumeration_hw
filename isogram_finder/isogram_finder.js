@@ -3,8 +3,8 @@ const IsogramFinder = function (word) {
 }
 
 IsogramFinder.prototype.isIsogram = function () {
-  const unique = (value, index, self) => {
-    return self.indexOf(value) === index;
+  const unique = (value, index, array) => {
+    return array.indexOf(value) === index;
   }
   const uniqueArray = this.word.filter(unique);
   return uniqueArray.join('') === this.word.join('');
